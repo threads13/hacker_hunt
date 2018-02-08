@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class SearchBar extends Component {
   constructor(props){
@@ -8,6 +9,15 @@ class SearchBar extends Component {
   }
 
   render() {
+    var request = axios.get('https://hackerhunt.co/api/daily/10')
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+
+
     return (
       <div
         style={{textAlign: 'center', marginTop: '1em', marginBottom: '4em'}}
