@@ -9,7 +9,7 @@ class SearchBar extends Component {
   }
 
   render() {
-    var request = axios.get('https://hackerhunt.co/api/daily/10')
+    var request = axios.get('https://hackerhunt.co/api/daily/0')
     .then(function(response){
       console.log(response);
     })
