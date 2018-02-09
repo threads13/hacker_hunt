@@ -7,16 +7,21 @@ class List extends Component {
     super(props);
 
     this.state = {
-      posts: []
+      title: [],
+      desc: []
     };
   }
 
   componentDidMount(){
     axios.get('https://hackerhunt.co/api/daily/0')
     .then(response => {
-      const posts = response.data.data.map(obj => obj.title);
-      console.log(posts,);
-      this.setState({ posts })
+      const title = response.data.data.map(obj => obj.title);
+      const desc = response.data.data.map(obj => obj.desc);
+      console.log(title, desc);
+      this.setState({
+        title,
+        desc
+      })
     })
   }
 
@@ -27,10 +32,17 @@ class List extends Component {
         className="list">
         <h6>Today</h6>
         <ul style={{listStyle: 'none'}}>
-          {this.state.posts.map(post =>
-            <li style={{margin: '2em'}}>{post}</li>
+          {this.state.title.map(title =>
+            <li style={{margin: '2em'}}>{title}</li>
           )}
+          {this.state.desc.map(desc =>
+            <li>{desc}</li>
+          )}
+
+
+
         </ul>
+
       </div>
     );
   }
