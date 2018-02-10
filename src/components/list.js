@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ListItem from './list_item';
 
 
 class List extends Component {
@@ -7,40 +8,48 @@ class List extends Component {
     super(props);
 
     this.state = {
-      title: [],
-      desc: []
+      entry: []
     };
   }
 
-  componentDidMount(){
+  // componentWillMount(){
+  //   axios.get('https://hackerhunt.co/api/daily/0')
+  //   .then(response => {
+  //
+  //     this.setState({ entry });
+  //     }
+  //   }
+
+  componentDidMount() {
     axios.get('https://hackerhunt.co/api/daily/0')
-    .then(response => {
-      const title = response.data.data.map(obj => obj.title);
-      const desc = response.data.data.map(obj => obj.desc);
-      console.log(title, desc);
-      this.setState({
-        title,
-        desc
-      })
-    })
+      .then(res => {
+        const entry = res.data.data;
+        this.setState({ entry });
+    });
   }
 
+
   render() {
+
+    const entry = this.state.entry.map((t) => (
+      <ListItem
+        key={t.id}
+        {...t}
+      />
+    ));
+
+    // const entry = this.state.entry.map((entry) => (
+    //   <ListItem
+    //     {...entry}
+    //   />
+    // ));
     return (
       <div
         style={{display: 'inline-block', width: '50%'}}
         className="list">
         <h6>Today</h6>
         <ul style={{listStyle: 'none'}}>
-          {this.state.title.map(title =>
-            <li style={{margin: '2em'}}>{title}</li>
-          )}
-          {this.state.desc.map(desc =>
-            <li>{desc}</li>
-          )}
-
-
-
+          {entry}
         </ul>
 
       </div>
@@ -49,31 +58,3 @@ class List extends Component {
 }
 
 export default List;
-
-//
-// fetchEntries() {
-//   const request = axios.get('https:www.//hackerhunt.co/api/daily/0');
-//   return request;
-// }
-//
-// <ul style={{listStyle: 'none'}}>
-//   <li>
-//     <h6>Starting</h6>
-//     <p>Here is some content</p>
-//   </li>
-//   <li>
-//     <h6>Second</h6>
-//     <p>Here is some content</p>
-//   </li>
-//   <li>
-//     <h6>Third</h6>
-//     <p>Here is some content</p>
-//   </li>
-//   <li>
-//     <h6>Fourth</h6>
-//     <p>Here is some content</p>
-//   </li>
-// </ul>
-// <div>
-//   {request}
-// </div>
