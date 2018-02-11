@@ -1,8 +1,11 @@
 button {
-  max-width: 100%;
-  width: 100%;
   background-color: #f60;
   color: white;
+}
+
+.email {
+  margin-bottom: 1em;
+  width: 100%;
   padding-top: 8px;
   padding-bottom: 8px;
   font-weight: 300;
@@ -11,5 +14,5 @@ button {
 .subscribe {
   width: 20%;
   float: right;
-  margin-right: .5em;
+  margin-right: 5%;
 }
