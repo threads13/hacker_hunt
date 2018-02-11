@@ -3,3 +3,17 @@
   float: left;
   margin-left: 5%;
 }
+
+h6{
+  margin-bottom: 3em;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #2F2F2F;
+}
+
+p:hover {
+  color: #f60;
+}

@@ -1,0 +1,11 @@
+img {
+    margin-left: 4%;
+    display: block;
+    float: left;
+}
+
+.searchbar {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 4em;
+}

@@ -1,3 +1,7 @@
+body{
+  margin-top: 2em;
+}
+
 h6 {
   font-size: 12px;
   font-color: #797979;
@@ -11,7 +15,9 @@ h2 {
 
 input {
   width: 50%;
+  margin: auto;
   border: solid 1px #DEDEDE;
+  padding-left: 10px;
 }
 
 .App-logo {

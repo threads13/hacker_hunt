@@ -3,3 +3,7 @@
   borderBottom: 'solid 1px gray';
   paddingBottom: '300px';
 }
+
+h2:hover {
+    color: #f60;
+}
