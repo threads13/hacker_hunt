@@ -8,7 +8,8 @@ const ListItem = props => {
     borderBottom: 'solid 1px #F2F6F7',
     paddingBottom: '30px',
     fontSize: '12px',
-    fontWeight: '300'
+    fontWeight: '300',
+    maxWidth: '90%'
   };
 
   return (

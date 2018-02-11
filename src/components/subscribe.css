@@ -1,0 +1,15 @@
+button {
+  max-width: 100%;
+  width: 100%;
+  background-color: #f60;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 300;
+}
+
+.subscribe {
+  width: 20%;
+  float: right;
+  margin-right: .5em;
+}
