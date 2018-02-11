@@ -14,6 +14,7 @@ class SearchBar extends Component {
         style={{textAlign: 'center', marginTop: '1em', marginBottom: '4em'}}
         className="searchbar">
         <input
+
           value={this.state.term}
           onChange={event => this.handleInputChange(event.target.value)}
         />

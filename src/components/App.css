@@ -1,4 +1,18 @@
+h6 {
+  font-size: 12px;
+  font-color: #797979;
+  text-transform: uppercase;
+  font-weight: 300;
+}
 
+h2 {
+  font-size: 18px;
+}
+
+input {
+  width: 50%;
+  border: solid 1px #DEDEDE;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

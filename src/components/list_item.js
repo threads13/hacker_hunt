@@ -1,18 +1,26 @@
 import React from 'react';
 
+
 const ListItem = props => {
-  console.log(props.title);
+  const style = {
+    marginBottom: '10px',
+    borderBottom: 'solid 1px #F2F6F7',
+    paddingBottom: '30px',
+    fontSize: '12px',
+    fontWeight: '300'
+  };
+
   return (
     <div>
-      <li style={{marginTop: '20px'}}>{props.title}</li>
-      <li>{props.desc}</li>
-      <li style={{
-          marginBottom: '10px',
-          borderBottom: 'solid 1px gray',
-          paddingBottom: '20px'
+      <h2 style={{marginTop: '30px'}}>{props.title}</h2>
+      <p style={{
+          fontSize: '14px',
+          fontColor: '#2F2F2F',
+          fontWeight: '300'
         }}>
-        <em>{props.tags}</em>
-    </li>
+        {props.desc}
+      </p>
+      <p style={style}> <em>{props.tags}</em></p>
     </div>
   );
 };

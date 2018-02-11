@@ -48,9 +48,9 @@ class List extends Component {
         style={{display: 'inline-block', width: '50%'}}
         className="list">
         <h6>Today</h6>
-        <ul style={{listStyle: 'none'}}>
+        <div>
           {entry}
-        </ul>
+        </div>
 
       </div>
     );
