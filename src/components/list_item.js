@@ -1,18 +1,18 @@
 import React from 'react';
 import './list_item.css';
+import TagItem from './tag_item'
 
 
 const ListItem = props => {
-  const style = {
-    marginBottom: '10px',
-    borderBottom: 'solid 1px #F2F6F7',
-    paddingBottom: '30px',
-    fontSize: '12px',
-    fontWeight: '300',
-    maxWidth: '90%'
-  };
-
   return (
+    // const tags = props.tags.map((t) => (
+    //   <TagItem
+    //     key={t.id}
+    //     {...t}
+    //   />
+    // ));
+
+
     <div>
       <h2 style={{marginTop: '30px'}}>{props.title}</h2>
       <p style={{
@@ -22,13 +22,21 @@ const ListItem = props => {
         }}>
         {props.desc}
       </p>
-      <p style={style}> <em>{props.tags}</em></p>
+      <p id="lastItem">
+        <TagItem tagItem={props.tags} />
+      </p>
     </div>
   );
 };
 
 export default ListItem;
 
+{/* <p id="lastItem">
+  <em>{props.tags}</em>
+</p>
+   */}
+
+        // <em><TagItem tagItem={tags} /></em>
 
 // {this.state.title.map(title =>
 //   <li style={{margin: '2em'}}>{title}</li>
