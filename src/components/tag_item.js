@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const TagItem = props => {
   const array = props.tagItem.split(",");
-  const tagArray = props.tagItem.split(",").map((arr) => {
+  const tagArray = array.map((arr) => {
     console.log(arr);
     return arr;
   });
