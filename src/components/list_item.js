@@ -1,7 +1,7 @@
 import React from 'react';
 import './list_item.css';
 import Summary from './summary'
-import TimeItem from './time_item';
+
 
 
 const ListItem = props => {
