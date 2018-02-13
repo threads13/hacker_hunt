@@ -1,6 +1,7 @@
 import React from 'react';
 import './list_item.css';
-import TagItem from './tag_item'
+import Summary from './summary'
+import TimeItem from './time_item';
 
 
 const ListItem = props => {
@@ -22,11 +23,15 @@ const ListItem = props => {
         }}>
         {props.desc}
       </p>
-      <p>TimeItem
-        <div style={{display: 'inline-block'}} id="lastItem">
-          <TagItem tagItem={props.tags} />
+      <span>
+        <div id="lastItem">
+          <Summary
+            tagItem={props.tags}
+            posted={props.date}
+            author={props.author}
+          />
         </div>
-      </p>
+      </span>
     </div>
   );
 };
