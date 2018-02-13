@@ -22,8 +22,10 @@ const ListItem = props => {
         }}>
         {props.desc}
       </p>
-      <p id="lastItem">
-        <TagItem tagItem={props.tags} />
+      <p>TimeItem
+        <div style={{display: 'inline-block'}} id="lastItem">
+          <TagItem tagItem={props.tags} />
+        </div>
       </p>
     </div>
   );
