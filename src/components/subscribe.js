@@ -8,7 +8,6 @@ class Subscribe extends Component {
     this.state = { email: ''}
   }
 
-
   render() {
     return (
       <div
@@ -23,7 +22,6 @@ class Subscribe extends Component {
         </h2>
         <p>We know the struggle.  A lot of great stuff on Hacker News gets lost in the /shownew limbo.</p>
         <p>Get the weekly top Show HN picks in your inbox</p>
-
       <form>
         <input
           className="email"
@@ -39,9 +37,7 @@ class Subscribe extends Component {
 
   handleInputChange(email){
     this.setState({ email });
-
   }
 }
-
 
 export default Subscribe;

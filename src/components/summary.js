@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import TimeItem from './time_item';
 
 const Summary = props => {
   const array = props.tagItem.split(",");
-  const posted = timeConvert(1518496670);
-  console.log(posted);
+  const dates = timeConvert(props.posted);
+  const converted = Object.values(dates);
+
+  const posted = Object.keys(dates).map(arr => {
+    return (
+      <div>{arr}</div>
+    )
+  });
 
   const tagArray = array.map(arr => {
     return (
@@ -38,6 +43,5 @@ function timeConvert(utcSeconds){
   d.setUTCSeconds(utcSeconds);
   return d
 }
-
 
 export default Summary;
