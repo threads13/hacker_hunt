@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import _ from 'lodash';
+import React from 'react';
 
 const Summary = props => {
   const array = props.tagItem.split(",");
@@ -36,9 +35,15 @@ const Summary = props => {
   });
 
   return(
-    <div style={{color: '#797979'}}>
+    <summary style=
+      {{
+        color: '#797979',
+        display: 'flex',
+        flexWrap: 'wrap'
+      }}>
 
-      <span style={{
+      <span style=
+        {{
           marginLeft: '4px',
           marginRight: '4px'
         }}>by
@@ -46,14 +51,14 @@ const Summary = props => {
       {props.author}
       {tagArray}
       {/* {datesArr} */}
-    </div>
+    </summary>
   )
 };
 
-function timeConvert(utcSeconds){
-  var d = new Date(0);
-  d.setUTCSeconds(utcSeconds);
-  return d
-}
+// function timeConvert(utcSeconds){
+//   var d = new Date(0);
+//   d.setUTCSeconds(utcSeconds);
+//   return d
+// }
 
 export default Summary;

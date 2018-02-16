@@ -14,7 +14,9 @@ class SearchBar extends Component {
         <div>
           <img
             id="logo"
-            src="https://i.gyazo.com/c50f9fc9e2dab3f77e31600c88e8a0ef.png" /></div>
+            alt="logo"
+            src="https://i.gyazo.com/c50f9fc9e2dab3f77e31600c88e8a0ef.png"
+           /></div>
         <div className="searchbar">
           <input
             value={this.state.term}

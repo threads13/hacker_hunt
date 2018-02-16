@@ -10,9 +10,11 @@ class App extends Component {
     return (
       <div className="App" style={{fontFamily: 'Roboto'}}>
         <SearchBar />
-        <Topics />
-        <Subscribe />
-        <List/>
+        <div className="main">
+          <Topics />
+          <Subscribe />
+          <List/>
+        </div>
       </div>
     );
   }
